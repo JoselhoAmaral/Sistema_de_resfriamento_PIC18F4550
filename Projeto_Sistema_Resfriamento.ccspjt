@@ -1,0 +1,19 @@
+[PROJECT]
+Target=Projeto_Sistema_Resfriamento.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=Projeto_Sistema_Resfriamento.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[Projeto_Sistema_Resfriamento.c]
+Type=4
+[mru-list]
+1=Projeto_Sistema_Resfriamento.c
+[Opened Files]
+1=Projeto_Sistema_Resfriamento.c
+2=
+[Units]
+Count=1
+1=Projeto_Sistema_Resfriamento (main)

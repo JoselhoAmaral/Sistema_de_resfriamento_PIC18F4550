@@ -1,0 +1,205 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-007 lines
+008     curr_line
+009.0   flag
+00A     contador
+00B     Controle_Velocidade.speed
+00C-00F MAIN.graus
+010     MAIN.velocidade
+011-014 LM.Sensor_LM
+011-014 @PRINTF_L32D_666FPFPF.P1
+011     lcd_init.i
+011-014 @PRINTF_L32D_9600_31766_31767FPFPF.P1
+011     MAIN.@SCRATCH1
+012     lcd_init.@SCRATCH1
+012     MAIN.@SCRATCH2
+013     MAIN.@SCRATCH3
+014     MAIN.@SCRATCH4
+015     @PRINTF_L32D_666FPFPF.P1
+015-018 LM.Conversor
+015-018 Controle_Velocidade.graus
+015     @PRINTF_L32D_9600_31766_31767FPFPF.P1
+016     @PRINTF_L32D_666FPFPF.@SCRATCH1
+016     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH1
+017     @PRINTF_L32D_666FPFPF.@SCRATCH2
+017     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH2
+018     @PRINTF_L32D_666FPFPF.@SCRATCH3
+018     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH3
+019-01C @DTOF.P1
+019     @PRINTF_D_9600_31766_31767.P2
+019-01C @SFTOI.P3
+019-01C @DIVFF.P4
+019     @PSTRINGCN_666.P5
+019-01A @ITOF.P6
+019     @PRINTF_D_666.P7
+019     @PSTRINGCN_9600_31766_31767.P8
+019     Controle_Velocidade.@SCRATCH1
+019     @PSTRINGC_666.@SCRATCH1
+019     @PSTRINGC_9600_31766_31767.@SCRATCH1
+019     @PRINTF_L32D_666FPFPF.@SCRATCH4
+019     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH4
+01A     @PRINTF_D_666.P1
+01A     @PRINTF_D_9600_31766_31767.P2
+01A     Controle_Velocidade.@SCRATCH2
+01A     @PSTRINGC_666.@SCRATCH2
+01A     @PSTRINGCN_666.@SCRATCH1
+01A     @PSTRINGC_9600_31766_31767.@SCRATCH2
+01A     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+01A     @PRINTF_L32D_666FPFPF.@SCRATCH5
+01A     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH5
+01B     Controle_Velocidade.@SCRATCH3
+01B     @PSTRINGCN_666.@SCRATCH2
+01B     @PRINTF_D_666.@SCRATCH1
+01B     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+01B     @PRINTF_D_9600_31766_31767.@SCRATCH1
+01B     @PRINTF_L32D_666FPFPF.@SCRATCH6
+01B     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH6
+01C     Controle_Velocidade.@SCRATCH4
+01C     @PRINTF_D_666.@SCRATCH2
+01C     @PRINTF_D_9600_31766_31767.@SCRATCH2
+01C     @PRINTF_L32D_666FPFPF.@SCRATCH7
+01C     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH7
+01D-020 @DIVFF.P1
+01D     @PRINTF_D_666.@SCRATCH3
+01D     @PRINTF_D_9600_31766_31767.@SCRATCH3
+01D     @PRINTF_L32D_666FPFPF.@SCRATCH8
+01D     @PRINTF_L32D_9600_31766_31767FPFPF.@SCRATCH8
+01E-021 @DIV3232.P1
+01E-021 @MULFF.P2
+01E-021 @FTOSD.P3
+01E     @PRINTF_D_666.@SCRATCH4
+01E     @PRINTF_D_9600_31766_31767.@SCRATCH4
+01F     lcd_putc.c
+01F     @DIV88.P1
+020     @delay_ms1.P1
+020     lcd_gotoxy.x
+020     @DIV88.P1
+021     lcd_gotoxy.y
+021     @DIV88.@SCRATCH1
+021     @DIVFF.@SCRATCH1
+022     lcd_gotoxy.address
+022-025 @MULFF.P1
+022-025 @DIV3232.P2
+022     @FTOSD.@SCRATCH1
+022     @DIVFF.@SCRATCH2
+023     lcd_gotoxy.@SCRATCH1
+023     @DIVFF.@SCRATCH3
+024     lcd_send_byte.address
+024     @DIVFF.@SCRATCH4
+025     lcd_send_byte.n
+025     @DIVFF.@SCRATCH5
+026     lcd_send_byte.@SCRATCH1
+026     @MULFF.@SCRATCH1
+026     @DIVFF.@SCRATCH6
+026     @DIV3232.@SCRATCH1
+027     lcd_send_nibble.nibble
+027     @MULFF.@SCRATCH2
+027     @DIV3232.@SCRATCH2
+028     @MULFF.@SCRATCH3
+028     @DIV3232.@SCRATCH3
+029     @DIV3232.@SCRATCH4
+02A     @DIV3232.@SCRATCH5
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000014  LCD_INIT_STRING.data
+000018  @const687.call
+00002A  @const689.call
+00003C  @const698.call
+000064  @const700.call
+00008C  @const701.call
+0000A8  @const707.call
+0000D0  @const718.call
+0000E0  @const719.call
+0000F2  @const720.call
+00011A  @const721.call
+000142  @const722.call
+00016A  @const723.call
+000192  @const724.call
+0001BA  @const727.call
+0001CE  @const734.call
+0001E2  @const735.call
+0001F6  @const739.call
+00021E  @const740.call
+00023C  @const741.call
+000264  @delay_ms1
+00028A  lcd_send_nibble
+0002D2  lcd_send_byte
+00030E  lcd_init
+000368  lcd_gotoxy
+00038E  lcd_putc
+0003D4  @PSTRINGC_666
+0003F4  @PSTRINGC_9600_31766_31767
+000416  @DTOF
+00044C  @MULFF
+00053E  @FTOSD
+00057C  LM
+0005F2  @ITOF
+000628  @PSTRINGCN_666
+000646  @DIV88
+00066E  @PRINTF_D_666
+000718  @PSTRINGCN_9600_31766_31767
+000738  @PRINTF_D_9600_31766_31767
+0007EA  @SFTOI
+000822  @DIVFF
+00097E  Controle_Velocidade
+000B10  @DIV3232
+000B9E  @PRINTF_L32D_666FPFPF
+000D20  @PRINTF_L32D_9600_31766_31767FPFPF
+000EA6  @cinit1
+000EA6  MAIN
+000ECA  @cinit2
+
+Project Directory:
+    C:\Users\Joselho Amaral\Documents\IFCE\S8 - Eng. Automação e Controle\Microcontroladores\Projeto Final Diciplina\
+
+Project Files:
+    Projeto_Sistema_Resfriamento.c                          [29-ago-21 20:38  CRC=63D15761]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [12-nov-13 14:35  CRC=5337E248]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\flex_lcd2.c [22-ago-21 23:08  CRC=F2027066]
+
+Source signature=9B0E1A75
+
+Units:
+    Projeto_Sistema_Resfriamento (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   Projeto_Sistema_Resfriamento.xsym
+    Errors:      Projeto_Sistema_Resfriamento.err
+    Ext Symbols: Projeto_Sistema_Resfriamento.esym
+    INHX32:      Projeto_Sistema_Resfriamento.hex
+    Symbols:     Projeto_Sistema_Resfriamento.sym
+    List:        Projeto_Sistema_Resfriamento.lst
+    Debug/COFF:  Projeto_Sistema_Resfriamento.cof
+    Project:     Projeto_Sistema_Resfriamento.ccspjt
+    Call Tree:   Projeto_Sistema_Resfriamento.tre
+    Statistics:  Projeto_Sistema_Resfriamento.STA
